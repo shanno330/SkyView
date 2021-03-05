@@ -1,14 +1,22 @@
 import { Injectable } from '@angular/core';
 import{ HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
+import { Search } from '../models/search';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService { 
-  longitude: number = -84.39733;
-  latitude: number= 33.775867;
+// weather api
+  weather: Search ={
+    lat:0,
+    lon:0,
+    name:''
+  }
+// moon api data
+  longitude: number = this.weather.lon;
+  latitude: number= this.weather.lat;
   style:object = {
     moonStyle: "default",
     backgroundStyle: "stars",
@@ -27,7 +35,7 @@ export class AuthService {
   hash =btoa(`${this.appID}:${this.appSec}`)
 
   constructor(private http:HttpClient) { }
-  getWetherApi(postal:string):Observable<any>{
+  getWeatherApi(postal:string):Observable<any>{
     return this.http.get<any>(`https://api.weatherapi.com/v1/forecast.json?`,{
       params: {q:postal, days:"4", key:this.ApiKey}
     })
