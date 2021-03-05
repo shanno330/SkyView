@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MoonphasesService } from 'src/app/services/moonphases.service';
-import { WeatherService } from 'src/app/services/weather.service';
+import { AuthService } from 'src/app/services/auth.service';
+
 
 @Component({
   selector: 'app-moon',
@@ -8,24 +8,19 @@ import { WeatherService } from 'src/app/services/weather.service';
   styleUrls: ['./moon.component.css']
 })
 export class MoonComponent implements OnInit {
-  moon: any;
+
+  image: any;
 
   zipcode:string =''
   constructor(
-    private moonphasesService: MoonphasesService,
-    private service:WeatherService 
+     private AuthService:AuthService 
   ) { }
 
   ngOnInit() {
-    // this.moonphasesService.getMoon().subscribe(data => {
-    //   this.moon = data
+     this.AuthService.moonImage().subscribe((res:any) =>{
+      this.image = res.data.imageUrl;
+      console.log(this.image)
+    })
 
-
-    // });
-
-     this.service.getWeather("49341").subscribe(data =>{
-this.moon = data
-console.log(this.moon)
-     })
   }
 }
