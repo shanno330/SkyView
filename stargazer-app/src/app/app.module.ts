@@ -4,12 +4,25 @@ import {HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MoonComponent } from './components/moon/moon.component';
+
+import { SearchComponent } from './components/search/search.component';
+import { WeatherMoonComponent } from './components/weather-moon/weather-moon.component';
+import { StarchartComponent } from './components/starchart/starchart.component';
+import { MainComponent } from './components/main/main.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './components/about/about.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoonComponent,
+    SearchComponent,
+    WeatherMoonComponent,
+    StarchartComponent,
+    MainComponent,
+    HeaderComponent,
+    AboutComponent
+    
     
   ],
   imports: [

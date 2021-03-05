@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MoonComponent } from './components/moon/moon.component';
+import { SearchComponent } from './components/search/search.component';
+
 
 const routes: Routes = [
-  { path: '', component: MoonComponent },
+  { path: '', component: SearchComponent },
 ];
 
 @NgModule({
