@@ -1,1 +1,25 @@
-<p>starchart works!</p>
+
+<form #addForm="ngForm" (ngSubmit)="searchCity(addForm)">
+  <label for="city">City</label>
+  <input
+    type="text"
+    id="city/zipcode"
+    name="city"
+    placeholder="Enter your city"
+    required
+    ngModel
+  />
+  <button>Search</button>
+</form>
+
+
+<label for="constellation">Constellations</label>
+  <select id="constellation" name="constellation" [(ngModel)] = "filtercons">
+    <option *ngFor ="let one of constellations, let i = index" 
+     [ngValue]= "one.id" >
+      {{one.name }}
+    </option>
+  </select>
+  <button (click)="searchCons()">Find Constellation</button>
+
+  <img [src]= "star">
