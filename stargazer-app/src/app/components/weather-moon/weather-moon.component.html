@@ -1,5 +1,5 @@
 <html>
-
+  <app-search></app-search>
   <div class="banner">
     <div class="moon"></div>
     <div class="clouds">
@@ -15,8 +15,13 @@
     <div class="day1">
       <div class="weatherImage1"></div>
       <div class="text1">
-        information pulled from API server
-        <p>Link to Click to see Moon Image</p>
+        <p class = "text">City :  {{weather.name}}</p>
+        <p class = "text">Date :  {{weather.date}}</p>
+        <p class = "text">Current Conditions :  {{weather.text}}</p>
+        <p class = "text">Current Temperature :  {{weather.temp_f}}</p>
+        <p class = "text">Chance of Rain :  {{weather.dailyChanceOfRain}}</p>
+        <p class = "text">Chance of Snow :  {{weather.dailyChanceOfRain}}</p>
+        <p>Click to see Moon Image</p>
       </div>
       <div class="moonImage1">MoonImage1</div>
     </div>
