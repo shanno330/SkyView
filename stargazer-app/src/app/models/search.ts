@@ -6,5 +6,7 @@ export interface Search {
     moon_phase: string;
     text: string;
     icon:string;
-
+    temp_f: number;
+    dailyChanceOfSnow: string,
+    dailyChanceOfRain: string,
 }
