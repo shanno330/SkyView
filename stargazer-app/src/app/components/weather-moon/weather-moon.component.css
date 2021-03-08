@@ -6,13 +6,14 @@
     box-sizing: border-box;
 }
 html{
-  height:100vh;
+  height:2200px;
   width:100%;
   background-size: cover;
   background: url('https://i.etsystatic.com/11598164/r/il/0daf56/933217164/il_794xN.933217164_htw0.jpg');
 }
 .moon{
   display:flex;
+  align-items: flex-end;
   width: 200px;
   height: 200px;
   margin:40px;
@@ -105,11 +106,12 @@ h1{
       background-repeat: no-repeat;
       background-size: contain;
       }
-.day1,.day2,.day3{
+.day1,.day2,.day3,.day4{
   display:flex;
   flex-direction:row;
   justify-content: space-around;
   align-items:center;
+  padding:70px;
 }
 .text1,.text2,.text3{
   color:white;
