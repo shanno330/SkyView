@@ -7,7 +7,7 @@ import { Search } from '../models/search';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService { 
+export class AuthService {
 // weather api
   weather: Search ={
     lat:0,
@@ -17,8 +17,10 @@ export class AuthService {
     moon_phase:'',
     text:'',
     icon:'',
+    temp_f: 0,
+    dailyChanceOfSnow: '',
+    dailyChanceOfRain: ''
   }
-  
 // moon api data
   // longitude = this.weather.lon;
   // latitude =this.weather.lat;
@@ -84,8 +86,8 @@ starChart(lat:number, lon:number,date:string,cons:string){
       parameters:{
         constellation: cons
       }
-     
-      
+
+
     },
   },
   {

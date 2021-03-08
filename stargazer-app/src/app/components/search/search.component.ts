@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Search } from 'src/app/models/search';
@@ -17,16 +18,16 @@ export class SearchComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  ngOnInit(): void {  
+  ngOnInit(): void {
   }
 
   searchCity(form:NgForm) {
     this.authService.getWeatherApi(form.value.city).subscribe((data:any) =>{
-      this.setWeather(data) 
+      this.setWeather(data)
       console.log(form.value)
     })
     form.reset;
-   
+
 
   }
 
@@ -51,16 +52,16 @@ export class SearchComponent implements OnInit {
 
   moonFullImage() {
     this.authService.moonImage( this.weather.lat, this.weather.lon,this.weather.date ).subscribe((res:any) =>{
-      this.image = res.data.imageUrl;      
+      this.image = res.data.imageUrl;
     console.log(this.weather.lat, this.weather.lon,this.weather.date,);
     console.log(this.image)
       })
 
       }
-        
 
 
-  
+
+
 
 
 }
