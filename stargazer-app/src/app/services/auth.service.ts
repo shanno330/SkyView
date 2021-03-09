@@ -18,9 +18,10 @@ export class AuthService {
     text:'',
     icon:'',
     temp_f: 0,
-    dailyChanceOfSnow: '',
-    dailyChanceOfRain: ''
+    dailyChanceOfRain: '',
+    dailyChanceOfSnow: ''
   }
+
 // moon api data
   // longitude = this.weather.lon;
   // latitude =this.weather.lat;
