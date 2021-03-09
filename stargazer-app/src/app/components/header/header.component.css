@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+}
+
+a:visited {
+    color: orange;
+}
+
+button {
+    background: transparent;
+    border: 1px solid orange;
+    color: orange;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        justify-content: center;
+        margin: 8px; 
+    }
+
+    button {
+        margin: 10px 20px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+
+}

@@ -7,21 +7,17 @@ import { SearchComponent } from './components/search/search.component';
 import { StarchartComponent } from './components/starchart/starchart.component';
 import { WeatherMoonComponent } from './components/weather-moon/weather-moon.component';
 
-
-const routes: Routes = [{ path: '', redirectTo:"/search" ,pathMatch:'full' },
-
+const routes: Routes = [
   { path: 'main', component: MainComponent },
-  { path: 'search', component: SearchComponent },
-
-  { path: 'starchart', component: StarchartComponent },
   { path: 'weather-moon', component: WeatherMoonComponent },
+  { path: 'starchart', component: StarchartComponent },
   { path: 'about', component: AboutComponent },
-
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
 ];
-//{ path: '', redirectTo:"/search" ,pathMatch:'full' },
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
