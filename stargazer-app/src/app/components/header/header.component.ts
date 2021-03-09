@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  hamburgerNav: boolean = false;
+
+  toggleMenu() {
+    this.hamburgerNav = !this.hamburgerNav;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

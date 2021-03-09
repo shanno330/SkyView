@@ -4,3 +4,16 @@
     <button><a routerLink="/about" routerLinkActive="active" alt="about">About</a></button>
 </header>
 
+<nav class="navbar">
+    <h4>SKYVIEW</h4>
+    <div class="dropdown">
+        <button (click)="toggleMenu()" class="dropbtn"> <i class="fas fa-bars"></i></button>
+        <div id="myDropdown" class="dropdown-content" *ngIf="hamburgerNav">
+          <a href="#Home">Home</a>
+          <a href="#Forecast">Forecast + Moon Phase</a>
+          <a href="#ExploreStarCharts">Explore Star Charts</a>
+          <a href="AboutUs">About</a>
+        </div>
+      </div>
+</nav> 
+

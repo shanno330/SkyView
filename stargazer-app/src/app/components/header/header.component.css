@@ -29,6 +29,10 @@ button:hover {
     background: rgba(255, 255, 255, .2);
 }
 
+nav {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     header {
         justify-content: center;
@@ -39,8 +43,17 @@ button:hover {
         margin: 10px 20px;
         font-size: 20px;
     }
+
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
+
+    nav {
+        display: block;
+    }
+
+    header {
+        display: none;
+    }
 
 }
