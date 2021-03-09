@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
+
 import { MainComponent } from './components/main/main.component';
 import { SearchComponent } from './components/search/search.component';
 import { StarchartComponent } from './components/starchart/starchart.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

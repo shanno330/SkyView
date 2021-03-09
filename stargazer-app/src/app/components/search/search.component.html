@@ -1,1 +1,27 @@
-<p>search works!</p>
+
+<!-- <input type="text" #city />
+<button (click)="searchCity(city.value)">Submit</button> -->
+
+<form #Form="ngForm" (ngSubmit)="searchCity(Form)">
+    <label for="city">City</label>
+    <input
+      type="text"
+      id="city/zipcode"
+      name="city"
+      placeholder="Enter your city"
+      required
+      ngModel
+    />
+    <button>Search</button>
+  </form>
+
+  {{weather.lon}}
+{{weather.name}}
+{{weather.lat}}
+<!-- {{weather.icon}} -->
+{{weather.text}}
+<button (click) ="moonFullImage()">{{weather.moon_phase}}</button>
+{{weather.date}}
+
+
+<img [src]="image">
