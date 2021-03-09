@@ -9,9 +9,10 @@ import { WeatherMoonComponent } from './components/weather-moon/weather-moon.com
 
 
 const routes: Routes = [{ path: '', redirectTo:"/search" ,pathMatch:'full' },
-  { path: 'search', component: SearchComponent },
+
   { path: 'main', component: MainComponent },
- 
+  { path: 'search', component: SearchComponent },
+
   { path: 'starchart', component: StarchartComponent },
   { path: 'weather-moon', component: WeatherMoonComponent },
   { path: 'about', component: AboutComponent },
