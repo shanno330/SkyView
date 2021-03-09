@@ -19,7 +19,7 @@ export class AuthService {
     icon:'',
     temp_f: 0,
     dailyChanceOfRain: '',
-    dailyChanceOfSnow: '',
+    dailyChanceOfSnow: ''
   }
 
 // moon api data
