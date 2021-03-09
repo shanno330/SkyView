@@ -8,8 +8,10 @@
 html{
   height:2200px;
   width:100%;
-  background-size: cover;
-  background: url('https://i.etsystatic.com/11598164/r/il/0daf56/933217164/il_794xN.933217164_htw0.jpg');
+  background: rgb(22,20,46);
+  background: linear-gradient( rgba(22,20,46,1), rgba(12,67,96,1) 39%, rgba(33,96,104,1), rgba(61,109,64,1) , rgba(110,104,8,1), rgba(131,106,29,1), rgba(192,110,13,1) );
+  /* background-size: cover;
+  background: url('https://i.etsystatic.com/11598164/r/il/0daf56/933217164/il_794xN.933217164_htw0.jpg'); */
 }
 .moon{
   display:flex;
@@ -73,13 +75,13 @@ h1{
   text-align:center;
   color:white;
   font-weight:900;
-  font-size:5em;
+  font-size:2em;
   -webkit-text-stroke: 4px orange;
 }
 .weatherImage1,.weatherImage2,.weatherImage3,.weatherImage4{
   display:flex;
   height:300px;
-  width:30%;
+  width:400px;
   margin:20px;
   border-radius: 15px;
   align-items:center;
@@ -87,31 +89,35 @@ h1{
   flex-direction: row;
 }
 .weatherImage1{
-  background: url(https://th.bing.com/th/id/R454b7471c101e10c89de14db8cb0a457?rik=KNOw9bjW0SOPpA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2flarge-icons%2flarge-weather%2f512%2fcloudy-night-icon.png&ehk=N8nvM1CjNjEnKIGxsp8N8iU3IpxehmPdxYGMOkPJ%2bts%3d&risl=&pid=ImgRaw);
+  background: url(https://i.pinimg.com/originals/9d/43/6e/9d436e6a7194ad0284f3ca92168a8b35.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size:cover;
+  border:5px solid #BB864C;
 }
 .weatherImage2{
-  background:url(https://th.bing.com/th/id/Rb7aa375e525736a39e47abee5c1263c4?rik=VbL59b%2bmp8g12g&riu=http%3a%2f%2ffindicons.com%2ffiles%2ficons%2f478%2fweather%2f128%2fthunderstorms.png&ehk=5H5KIc1RcHnVXwCaIPeJiapzHW3pkqektaudYiDW9kA%3d&risl=&pid=ImgRaw);
-    background-repeat: no-repeat;
-    background-size: contain;
+  background: url(https://i.pinimg.com/originals/d1/96/81/d1968147ddd10523ff4ede53dffb2744.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  border:5px solid #BB864C;
   }
   .weatherImage3{
-    background:url(https://cdn3.iconfinder.com/data/icons/weather-forecast-color-vol-3/100/__33-512.png);
+      background: url(https://il6.picdn.net/shutterstock/videos/13752698/thumb/1.jpg);
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
+      border:5px solid #BB864C;
     }
   .weatherImage4{
-      background:url(https://wpclipart.com/dl.php?img=/space/moon/moon_4/waning_cresent_moon_T.png);
+      background: url(https://images3.alphacoders.com/704/704427.jpg);
+      background-size:cover;
       background-repeat: no-repeat;
-      background-size: contain;
+      border:5px solid #BB864C;
       }
 .day1,.day2,.day3,.day4{
   display:flex;
   flex-direction:row;
   justify-content: space-around;
   align-items:center;
-  padding:70px;
+  padding:20px;
 }
 .text1,.text2,.text3{
   display:flex;
