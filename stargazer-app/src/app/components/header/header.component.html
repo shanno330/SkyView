@@ -1,19 +1,42 @@
 <header>
-    <button><a routerLink="/weather-moon" routerLinkActive="active" alt="weather-moon">Forecast + Moon Phase</a></button>
-    <button><a routerLink="/starchart" routerLinkActive="active" alt="starchart">Explore Star Charts</a></button>
-    <button><a routerLink="/about" routerLinkActive="active" alt="about">About</a></button>
+  <div class="button-container">
+  <button>
+    <a routerLink="/weather-moon" routerLinkActive="active" alt="weather-moon"
+      >Forecast + Moon Phase</a
+    >
+  </button>
+  <button>
+    <a routerLink="/starchart" routerLinkActive="active" alt="starchart"
+      >Explore Star Charts</a
+    >
+  </button>
+  <button>
+    <a routerLink="/about" routerLinkActive="active" alt="about">About</a>
+  </button>
+</div>
 </header>
 
 <nav class="navbar">
-    <h4>SKYVIEW</h4>
+  <div class="nav-container">
+    <h4>SkyView</h4>
     <div class="dropdown">
-        <button (click)="toggleMenu()" class="dropbtn"> <i class="fas fa-bars"></i></button>
-        <div id="myDropdown" class="dropdown-content" *ngIf="hamburgerNav">
-          <a href="#Home">Home</a>
-          <a href="#Forecast">Forecast + Moon Phase</a>
-          <a href="#ExploreStarCharts">Explore Star Charts</a>
-          <a href="AboutUs">About</a>
-        </div>
+      <button (click)="toggleMenu()" class="dropbtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="myDropdown" class="dropdown-content" *ngIf="hamburgerNav">
+        <a routerLink="/main" routerLinkActive="active" alt="home"
+          >Home</a>
+        <a
+          routerLink="/weather-moon"
+          routerLinkActive="active"
+          alt="weather-moon"
+          >Forecast + Moon Phase</a
+        >
+        <a routerLink="/starchart" routerLinkActive="active" alt="starchart"
+          >Explore Star Charts</a
+        >
+        <a routerLink="/about" routerLinkActive="active" alt="about">About</a>
       </div>
-</nav> 
-
+    </div>
+  </div>
+</nav>

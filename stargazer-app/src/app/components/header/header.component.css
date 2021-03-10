@@ -1,7 +1,13 @@
 header {
+    display: block;
+    width: 100%;
+}
+
+.button-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100vh;
+    margin: 10px;
 }
 
 a {
@@ -35,8 +41,12 @@ nav {
 
 @media only screen and (max-width: 768px) {
     header {
-        justify-content: center;
+        justify-content: space-around;
         margin: 8px; 
+    }
+
+    .button-container {
+        width: fit-content;
     }
 
     button {
@@ -47,13 +57,57 @@ nav {
 }
 
 @media only screen and (max-width: 600px) {
-
-    nav {
-        display: block;
-    }
-
     header {
         display: none;
     }
 
+    nav {
+        display: block;
+        z-index: 1;
+        width: 100%;
+        background-color: rgb(11, 11, 58);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h4 {
+        font-family: "Orbitron", sans-serif;
+        margin-left: 10px;
+        background: -webkit-linear-gradient(right, #eee, orange, #eee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 20px;
+    }
+
+   #myDropdown {
+       display: flex;
+       flex-direction: column;
+       position: absolute;
+       min-width: 160px;
+       background-color: rgba(255, 255, 255, .4);
+       font-family: "Raleway", sans-serif;
+       right: 0;
+       top: 78px;
+   }
+
+   #myDropdown a {
+    padding: 8px;
+    font-size: 20px;
+   }
+
+   i {
+       font-size: 25px;
+   }
+   
+   .dropbtn {
+       display: flex;
+       padding: 8px; 
+   }
 }
