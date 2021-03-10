@@ -11,9 +11,9 @@ export class AppComponent {
 
   constructor(private authService: AuthService) {}
 
-  // ngOnInit() {
-  //   this.authService.getWeatherApi('48101').subscribe((data:any) =>{
-  //       console.log(data);
-  //   } )
-  // }
+  ngOnInit() {
+    this.authService.getWeatherApi('48101').subscribe((data:any) =>{
+        console.log(data);
+    } )
+  }
 }
