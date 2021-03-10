@@ -35,10 +35,10 @@ export class SearchComponent implements OnInit {
     this.authService.weather.lat = data.location.lat;
     this.authService.weather.lon = data.location.lon;
     this.authService.weather.name =data.location.name;
-    this.authService.weather.date =data.forecast.forecastday[0].date;
-    this.authService.weather.moon_phase =data.forecast.forecastday[0].astro.moon_phase
-    this.authService.weather.text =data.forecast.forecastday[0].day.condition.text
-    this.authService.weather.icon =data.forecast.forecastday[0].day.condition.icon
+    this.authService.weather.date1 =data.forecast.forecastday[0].date;
+    this.authService.weather.moon_phase1 =data.forecast.forecastday[0].astro.moon_phase
+    this.authService.weather.text1 =data.forecast.forecastday[0].day.condition.text
+    this.authService.weather.icon1 =data.forecast.forecastday[0].day.condition.icon
     // this.authService.weather.date =data.forecast.forecastday[1].date;
     // this.authService.weather.moon_phase =data.forecast.forecastday[1].astro.moon_phase
     // this.authService.weather.text =data.forecast.forecastday[1].day.condition.text
@@ -51,9 +51,9 @@ export class SearchComponent implements OnInit {
   }
 
   moonFullImage() {
-    this.authService.moonImage( this.weather.lat, this.weather.lon,this.weather.date ).subscribe((res:any) =>{
+    this.authService.moonImage( this.weather.lat, this.weather.lon,this.weather.date1 ).subscribe((res:any) =>{
       this.image = res.data.imageUrl;
-    console.log(this.weather.lat, this.weather.lon,this.weather.date,);
+    console.log(this.weather.lat, this.weather.lon,this.weather.date1,);
     console.log(this.image)
       })
 

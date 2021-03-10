@@ -13,18 +13,25 @@ export class AuthService {
     lat:0,
     lon:0,
     name:'',
-    date:'',
-    moon_phase:'',
-    text:'',
-    icon:'',
+    date1:'',
+    date2:'',
+    date3:'',
+    moon_phase1:'',
+    moon_phase2:'',
+    moon_phase3:'',
+    text1: '',
+    text2: '',
+    text3: '',
+    icon1:'',
+    icon2:'',
+    icon3:'',
     temp_f: 0,
     dailyChanceOfRain: '',
     dailyChanceOfSnow: ''
   }
 
 // moon api data
-  // longitude = this.weather.lon;
-  // latitude =this.weather.lat;
+ 
   style:object = {
     moonStyle: "default",
     backgroundStyle: "stars",
@@ -32,7 +39,7 @@ export class AuthService {
     headingColor: "#ffffff",
     textColor: "#ffffff",
   };
-  // date = this.weather.date;
+ 
   viewType: string = "portrait-simple"
 
 
@@ -76,7 +83,7 @@ export class AuthService {
 
 starChart(lat:number, lon:number,date:string,cons:string){
   return this.http.post(`https://api.astronomyapi.com/api/v2/studio/star-chart`, {
-    style:"default",
+    style:"navy",
     observer: {
       latitude:lat,
       longitude:lon,
@@ -102,6 +109,45 @@ starChart(lat:number, lon:number,date:string,cons:string){
   })
 
 }
+
+starChartArea(lat:number,lon:number,date:string, right:number,dec:number){
+  return this.http.post(`https://api.astronomyapi.com/api/v2/studio/star-chart`, {
+    style:"sketch",
+    observer: {
+      latitude:lat,
+      longitude: lon,
+      date: date,
+    },
+    view: {
+      type: "area",
+      parameters: {
+          position: {
+              equatorial: {
+                  rightAscension:right,
+                  declination:dec
+              }
+          },
+          zoom: 9 
+      },
+  },
+},
+  {
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+      Authorization: `Basic ${btoa(
+        `${this.appID}:${this.appSec}`
+      )}`
+    },
+
+  })
+
+  
+  
+}
+
+
+
+
 }
 
 

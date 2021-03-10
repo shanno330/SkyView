@@ -1,25 +1,55 @@
 
-<form #addForm="ngForm" (ngSubmit)="searchCity(addForm)">
+<h1>Star chart </h1>
+<form>
   <label for="city">City</label>
   <input
     type="text"
-    id="city/zipcode"
+    id="city"
     name="city"
-    placeholder="Enter your city"
+    class= "text"
     required
-    ngModel
+    [(ngModel)]="filterCity"
   />
-  <button>Search</button>
-</form>
-
 
 <label for="constellation">Constellations</label>
-  <select id="constellation" name="constellation" [(ngModel)] = "filtercons">
-    <option *ngFor ="let one of constellations, let i = index" 
-     [ngValue]= "one.id" >
-      {{one.name }}
-    </option>
-  </select>
-  <button (click)="searchCons()">Find Constellation</button>
+<select id="constellation" name="constellation" class="cons" [(ngModel)] = "filtercons">
+  <option *ngFor ="let one of constellations, let i = index" 
+   [ngValue]= "one.id" >
+    {{one.name }}
+  </option>
+</select>
+<button class ="button" (click)="searchCons()">Find Constellation</button>
+</form>
 
-  <img [src]= "star">
+<form><label for="title">Search by Title</label>
+  <input
+    type="text"
+    id="title"
+    name="title"
+  
+    [(ngModel)]="filterCity"
+  />
+  <input
+    type="number"
+    id="right"
+    name="right"
+    placeholder="0-24.00"
+    required
+    [(ngModel)]="filterRight"
+  />
+  <input
+    type="number"
+    id="dec"
+    name="dec"
+    placeholder="-80 to 80"
+    required
+    [(ngModel)]="filterDec"
+  />
+  
+  <button (click)="searchArea()">Find Area</button>
+  </form>
+
+
+
+
+  <img class="image" [src]= "star">

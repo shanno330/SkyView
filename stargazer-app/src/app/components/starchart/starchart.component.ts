@@ -9,8 +9,12 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./starchart.component.css']
 })
 export class StarchartComponent implements OnInit {
-  star: any;
+ star: any;
  filtercons:string='';
+ filterCity:string ='';
+ filterDec: number= 0;
+  filterRight: number =0;
+
 
 
   constellations:any =[{id: "and", name: "Andromeda"},
@@ -105,7 +109,7 @@ export class StarchartComponent implements OnInit {
 
 ]
 
-get weather(): Search {
+get weather() {
   return this.authService.weather
 }
 
@@ -114,34 +118,45 @@ get weather(): Search {
   ngOnInit(): void {
   }
 
-  searchCity(form:NgForm){
-    this.authService.getWeatherApi(form.value.city).subscribe((data:any)=>{
-      this.setWeather(data)
-      
-    })
-
-  }
+ 
 
 
   setWeather(data:any) {
     this.authService.weather.lat = data.location.lat;
     this.authService.weather.lon = data.location.lon;
     this.authService.weather.name =data.location.name;
-    this.authService.weather.date =data.forecast.forecastday[0].date;
-    this.authService.weather.moon_phase =data.forecast.forecastday[0].astro.moon_phase
-    this.authService.weather.text =data.forecast.forecastday[0].day.condition.text
-    this.authService.weather.icon =data.forecast.forecastday[0].day.condition.icon
+    this.authService.weather.date1 =data.forecast.forecastday[0].date;
+    this.authService.weather.moon_phase1 =data.forecast.forecastday[0].astro.moon_phase
+    this.authService.weather.text1 =data.forecast.forecastday[0].day.condition.text
+    this.authService.weather.icon1 =data.forecast.forecastday[0].day.condition.icon
   }
 
 
 
     searchCons() {
-    console.log(this.filtercons)
-    this.authService.starChart(this.weather.lat, this.weather.lon,this.weather.date, this.filtercons).subscribe((data:any)=>{
+      this.authService.getWeatherApi(this.filterCity).subscribe((data:any)=>{
+      this.setWeather(data)
+    })
+      console.log(this.filtercons)
+      this.authService.starChart(this.weather.lat, this.weather.lon,this.weather.date1, this.filtercons).subscribe((data:any)=>{
       this.star =  data.data.imageUrl;
-          });
+      });
 
   }
+
+  searchArea(){
+    this.authService.getWeatherApi(this.filterCity).subscribe((data:any)=>{
+      this.setWeather(data)
+      console.log(this.weather.date1)
+    })
+  this.authService.starChartArea(this.weather.lat, this.weather.lon, this.weather.date1, this.filterRight, this.filterDec).subscribe((data:any)=>{
+    this.star =  data.data.imageUrl;
+    console.log(this.weather.lat, this.weather.lon,this.weather.date1,this.filterRight, this.filterDec)
+    console.log( this.star)
+        });
+      }
+    
+
 }
   
 
