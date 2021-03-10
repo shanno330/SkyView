@@ -26,12 +26,16 @@ export class AuthService {
     icon2:'',
     icon3:'',
     temp_f: 0,
-    dailyChanceOfRain: '',
-    dailyChanceOfSnow: ''
+    dailyChanceOfRain1: '',
+    dailyChanceOfSnow1: '',
+    dailyChanceOfRain2: '',
+    dailyChanceOfSnow2: '',
+    dailyChanceOfRain3: '',
+    dailyChanceOfSnow3: ''
   }
 
 // moon api data
- 
+
   style:object = {
     moonStyle: "default",
     backgroundStyle: "stars",
@@ -39,7 +43,7 @@ export class AuthService {
     headingColor: "#ffffff",
     textColor: "#ffffff",
   };
- 
+
   viewType: string = "portrait-simple"
 
 
@@ -127,7 +131,7 @@ starChartArea(lat:number,lon:number,date:string, right:number,dec:number){
                   declination:dec
               }
           },
-          zoom: 9 
+          zoom: 9
       },
   },
 },
@@ -141,8 +145,8 @@ starChartArea(lat:number,lon:number,date:string, right:number,dec:number){
 
   })
 
-  
-  
+
+
 }
 
 

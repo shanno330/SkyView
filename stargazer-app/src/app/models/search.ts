@@ -15,6 +15,10 @@ export interface Search {
     icon2:string;
     icon3:string;
     temp_f: number;
-    dailyChanceOfSnow: string,
-    dailyChanceOfRain: string,
+    dailyChanceOfSnow1: string;
+    dailyChanceOfRain1: string;
+    dailyChanceOfSnow2: string;
+    dailyChanceOfRain2: string;
+    dailyChanceOfSnow3: string;
+    dailyChanceOfRain3: string;
 }
