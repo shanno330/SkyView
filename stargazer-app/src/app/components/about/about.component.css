@@ -38,8 +38,9 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
+  width: 100%;
 }
-p{
+p {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -47,8 +48,13 @@ p{
     margin: 65px;
     color: white;
     font-family: "Raleway", sans-serif;
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 h2 {
     align-content: center;
@@ -59,7 +65,7 @@ h2 {
 }
 /* tablet view <768 */
 @media only screen and (min-width: 600px) {
-
+  
 }
 /* desktop >768 */
 @media only screen and (min-width: 768px) {
