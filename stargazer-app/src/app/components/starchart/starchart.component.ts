@@ -9,11 +9,12 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./starchart.component.css']
 })
 export class StarchartComponent implements OnInit {
- star: any;
+ starConst: any;
+ starArea: any;
  filtercons:string='';
  filterCity:string ='';
- filterDec: number= 0;
-  filterRight: number =0;
+//  filterDec: number= 0;
+//   filterRight: number =0;
 
 
 
@@ -139,7 +140,8 @@ get weather() {
     })
       console.log(this.filtercons)
       this.authService.starChart(this.weather.lat, this.weather.lon,this.weather.date1, this.filtercons).subscribe((data:any)=>{
-      this.star =  data.data.imageUrl;
+      this.starConst =  data.data.imageUrl;
+      console.log(this.starConst);
       });
 
   }
@@ -149,10 +151,10 @@ get weather() {
       this.setWeather(data)
       console.log(this.weather.date1)
     })
-  this.authService.starChartArea(this.weather.lat, this.weather.lon, this.weather.date1, this.filterRight, this.filterDec).subscribe((data:any)=>{
-    this.star =  data.data.imageUrl;
-    console.log(this.weather.lat, this.weather.lon,this.weather.date1,this.filterRight, this.filterDec)
-    console.log( this.star)
+  this.authService.starChartArea(this.weather.lat, this.weather.lon, "2021-03-10", 10,10).subscribe((data:any)=>{
+    this.starArea =  data.data.imageUrl;
+    console.log(this.weather.lat, this.weather.lon,this.weather.date1)
+    console.log( this.starArea)
         });
       }
     

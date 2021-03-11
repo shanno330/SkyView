@@ -116,7 +116,7 @@ starChart(lat:number, lon:number,date:string,cons:string){
 
 starChartArea(lat:number,lon:number,date:string, right:number,dec:number){
   return this.http.post(`https://api.astronomyapi.com/api/v2/studio/star-chart`, {
-    style:"sketch",
+    style:"default",
     observer: {
       latitude:lat,
       longitude: lon,
