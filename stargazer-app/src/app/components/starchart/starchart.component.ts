@@ -13,6 +13,7 @@ export class StarchartComponent implements OnInit {
  starArea: any;
  filtercons:string='';
  filterCity:string ='';
+ filterCityZipcode:string =''
 //  filterDec: number= 0;
 //   filterRight: number =0;
 
@@ -135,7 +136,7 @@ get weather() {
 
 
     searchCons() {
-      this.authService.getWeatherApi(this.filterCity).subscribe((data:any)=>{
+      this.authService.getWeatherApi(this.filterCityZipcode).subscribe((data:any)=>{
       this.setWeather(data)
     })
       console.log(this.filtercons)
@@ -151,7 +152,7 @@ get weather() {
       this.setWeather(data)
       console.log(this.weather.date1)
     })
-  this.authService.starChartArea(this.weather.lat, this.weather.lon, "2021-03-10", 10,10).subscribe((data:any)=>{
+  this.authService.starChartArea(this.weather.lat, this.weather.lon, this.weather.date1, 10,10).subscribe((data:any)=>{
     this.starArea =  data.data.imageUrl;
     console.log(this.weather.lat, this.weather.lon,this.weather.date1)
     console.log( this.starArea)
