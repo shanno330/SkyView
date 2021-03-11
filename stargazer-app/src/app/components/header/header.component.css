@@ -42,7 +42,7 @@ nav {
 @media only screen and (max-width: 768px) {
     header {
         justify-content: space-around;
-        margin: 8px;
+        margin: 8px; 
     }
 
     .button-container {
@@ -105,9 +105,9 @@ nav {
    i {
        font-size: 25px;
    }
-
+   
    .dropbtn {
        display: flex;
-       padding: 8px;
+       padding: 8px; 
    }
 }
