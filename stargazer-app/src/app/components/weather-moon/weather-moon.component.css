@@ -9,6 +9,7 @@ html{
 /* height:1600px; */
 height:auto;
 width:100%;
+background-size: cover;
 background: rgb(22,20,46);
 background: linear-gradient( rgba(22,20,46,1), rgba(12,67,96,1) 39%, rgba(33,96,104,1), rgba(61,109,64,1) , rgba(110,104,8,1), rgba(131,106,29,1), rgba(192,110,13,1) );
 /* background-size: cover;

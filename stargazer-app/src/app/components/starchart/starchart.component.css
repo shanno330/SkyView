@@ -1,16 +1,28 @@
-body, html{
-    margin:10px;
-    padding:10px;
+*{
+  padding: 0;
+  margin:0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+html{
+    height:100vh;
+    background: rgb(22,20,46);
+    background: linear-gradient( rgba(22,20,46,1), rgba(12,67,96,1) 39%, rgba(33,96,104,1), rgba(61,109,64,1) , rgba(110,104,8,1), rgba(131,106,29,1), rgba(192,110,13,1) );
 }
 
 header {
     display: flex;
     justify-content: center;
 }
-
+.button-container{
+  margin:0;
+}
 h1 {
     text-align: center;
     font-family: "Orbitron", sans-serif;
+    background: -webkit-linear-gradient(right, orange,white,orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .chart-containers {
@@ -28,6 +40,11 @@ form{
     flex-direction: column;
     padding:10px;
     font-family: "Raleway", sans-serif;
+    border-radius: 15px;
+    border: 5px solid #BB864C;
+    margin:20px;
+    color: orange;
+    line-height: 30px;
 }
 
 .image-container {
@@ -40,4 +57,36 @@ form{
     height: 400px;
     background-color: grey;
 }
+button,input,select{
+  border-radius:5px;
+  background: transparent;
+  border: 2px solid orange;
+  color: orange;
+  padding: 3px 5px;
+  margin: 5px;
+  font-size: 15px;
+}
+button:hover{
+  background: rgba(255, 255, 255, .2);
+}
 
+@media only screen and (max-width:600px){
+  .chart-containers{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form{
+    width:80%;
+    margin:20px;
+    height:550;
+    margin:20px;
+  }
+  html{
+    height:auto;
+  }
+  img{
+    border-radius: 10px;
+  }
+
+}
