@@ -37,16 +37,23 @@ h1 {
 .flex-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-content: center;
   width: 100%;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 10px;
 }
 p {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    margin: 65px;
+    /* margin: 65px; */
     color: white;
     font-family: "Raleway", sans-serif;
     /* width: 100%;
