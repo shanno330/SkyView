@@ -138,12 +138,13 @@ get weather() {
     searchCons() {
       this.authService.getWeatherApi(this.filterCityZipcode).subscribe((data:any)=>{
       this.setWeather(data)
-    })
+    
       console.log(this.filtercons)
       this.authService.starChart(this.weather.lat, this.weather.lon,this.weather.date1, this.filtercons).subscribe((data:any)=>{
       this.starConst =  data.data.imageUrl;
       console.log(this.starConst);
       });
+    });
 
   }
 
@@ -151,12 +152,13 @@ get weather() {
     this.authService.getWeatherApi(this.filterCity).subscribe((data:any)=>{
       this.setWeather(data)
       console.log(this.weather.date1)
-    })
+    
   this.authService.starChartArea(this.weather.lat, this.weather.lon, this.weather.date1, 10,10).subscribe((data:any)=>{
     this.starArea =  data.data.imageUrl;
     console.log(this.weather.lat, this.weather.lon,this.weather.date1)
     console.log( this.starArea)
         });
+      });
       }
     
 

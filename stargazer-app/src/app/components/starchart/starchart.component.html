@@ -1,52 +1,63 @@
 <header>
   <app-header></app-header>
-
-<div class=background>
-<h1>Explore Star Charts</h1>
-<div class="chart-containers">
-  <form>
-    <label for="city">Earthly Location:</label>
-    <input
-      type="text"
-      id="city"
-      name="city"
-      placeholder="Enter Zipcode"
-      class="text"
-      required
-      [(ngModel)]="filterCityZipcode"
-    />
-
-    <label for="constellation">Choose Your Constellation</label>
-    <select
-      id="constellation"
-      name="constellation"
-      class="cons"
-      [(ngModel)]="filtercons"
-    >
-      <option
-        *ngFor="let one of constellations; let i = index"
-        [ngValue]="one.id"
-      >
-        {{ one.name }}
-      </option>
-    </select>
-    <button class="button" (click)="searchCons()">View Constellation</button>
-    <div class="image-container">
-      <img class="image" *ngIf ="starConst" [src]="starConst"/>
-    </div>
-  </form>
-
-  <form>
-    <label for="title">Earthly Location:</label>
-    <input type="text" id="title" placeholder="Enter Zipcode" name="title" [(ngModel)]="filterCity" />
-    <button (click)="searchArea()">View Your Sky</button>
-    <div class="image-container">
-      <img class="image" *ngIf ="starArea" [src]="starArea" />
-    </div>
-  </form>
-</div>
-</div>
 </header>
 
+  <div class="background">
+    
+    <h1>Explore Star Charts</h1>
+    <div class="chart-containers">
+      <div class="chart">
+        <form>
+          <label for="city">Earthly Location:</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter Zipcode"
+            class="text"
+            required
+            [(ngModel)]="filterCityZipcode"
+          />
 
+          <label for="constellation">Choose Your Constellation</label>
+          <select
+            id="constellation"
+            name="constellation"
+            class="cons"
+            [(ngModel)]="filtercons"
+          >
+            <option
+              *ngFor="let one of constellations; let i = index"
+              [ngValue]="one.id"
+            >
+              {{ one.name }}
+            </option>
+          </select>
+          <button class="button" (click)="searchCons()">
+            View Constellation
+          </button>
+        </form>
+          <div class="image-container">
+            <img class="image" *ngIf="starConst" [src]="starConst" />
+          </div>
+        
+      </div>
+      <div class="area">
+        <form>
+          <label for="title">Earthly Location:</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Enter Zipcode"
+            name="title"
+            [(ngModel)]="filterCity"
+          />
+          <button (click)="searchArea()">View Your Sky</button>
+          <div class="image-container">
+            <img class="image" *ngIf="starArea" [src]="starArea" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
