@@ -3,8 +3,8 @@ html {
   margin: 0;
 }
 
-
 .starchart-container {
+  height: 100%;
   background: rgb(22, 20, 46);
   background: linear-gradient(
     rgba(22, 20, 46, 1),
@@ -17,7 +17,7 @@ html {
   );
 }
 .background {
-  height: auto;
+  height: 100%;
   width: 100%;
   display: flex;
 }
@@ -45,13 +45,14 @@ header {
 .chart-containers {
   display: flexbox;
   justify-content: space-around;
+  flex-direction: column;
   margin-top: 60px;
   padding: 15px;
+  height: 100%;
 }
 
 .chart,
 .area {
-  /* width: 320px; */
   margin: 10px;
   border: 1px solid black;
   display: flex;
@@ -91,14 +92,11 @@ button {
   font-family: "Raleway", sans-serif;
 }
 
-.image-container {
-  /* width: 350px;
-  height: 350px; */
+button:hover {
+  cursor: pointer;
 }
 
 .image {
-  width: 500px;
-  height: 500px;
   background-color: grey;
 }
 
@@ -108,6 +106,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-family: "Raleway", sans-serif;
 }
 
 @media only screen and (min-width: 600px) {
@@ -138,34 +138,14 @@ button {
     display: inline;
     justify-content: space-around;
     align-items: center;
-    /* background: rgb(22, 20, 46);
-    background: linear-gradient(
-      rgba(22, 20, 46, 1),
-      rgba(12, 67, 96, 1) 39%,
-      rgba(33, 96, 104, 1),
-      rgba(61, 109, 64, 1),
-      rgba(110, 104, 8, 1),
-      rgba(131, 106, 29, 1),
-      rgba(192, 110, 13, 1),
-    ) */
-  }
-
-  .chart,
-  .area {
-    width: 450px;
-    height: 450px;
   }
 
   h1 {
     font-size: 70px;
     margin-top: 0;
   }
-
-  .image {
-    width: 300px;
-    height: 300px;
-    background-color: grey;
-  }
+  
+  
   
 }
 

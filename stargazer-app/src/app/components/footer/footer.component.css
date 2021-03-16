@@ -2,22 +2,22 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background: rgb(241, 188, 88);
+    background:rgb(22, 20, 46);
     font-family: "Raleway", sans-serif;
     height: 50px;
+    color: white;
+
 }
  p, a, div {
     padding-left:5px;
+    color: white;
  }
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
-a:visited {
-    color: black;
-}
 
 @media only screen and (min-width: 600px) {
     .container {
