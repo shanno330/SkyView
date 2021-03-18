@@ -63,12 +63,16 @@ p {
 img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  border: 3px solid orange;
 
 }
 h2 {
-    align-content: center;
+    text-align: center;
     justify-content: center;
     text-shadow: 0.1em 0.1em 0.2em white;
+    color:orange;
+    height: 45px;
     /* text-shadow: -1px 0 black, 0 1px black,
       1px 0 black, 0 -1px black */
 }
