@@ -4,7 +4,6 @@ html {
 }
 
 .starchart-container {
-
   background: rgb(22, 20, 46);
   background: linear-gradient(
     rgba(22, 20, 46, 1),
@@ -17,8 +16,6 @@ html {
   );
 }
 .background {
-  /* height: 100%;
-  width: 100%; */
   display: flex;
   flex-direction: column;
 }
@@ -45,11 +42,9 @@ header {
 
 .chart-containers {
   display: flex;
-  /* justify-content: space-around; */
   flex-direction: column;
   margin-top: 60px;
   padding: 15px;
-  height: 100%;
 }
 
 .chart,
@@ -78,9 +73,6 @@ input {
   padding: 7px;
   margin: 7px;
 }
-/* label {
-  display: inline-block;
-} */
 
 button {
   display: block;
@@ -100,6 +92,11 @@ button:hover {
 .image {
   background-color: grey;
   border-radius:15px;
+  height: 300px;
+  width: 300px;
+  padding: 2px;
+  display: flexbox;
+  align-items: center;
 }
 
 .loading {
@@ -144,37 +141,7 @@ span{
 }
 }
 
-  @media only screen and (max-width: 375px) {
-    /* html{
-      height:auto;
-    } */
-    .chart-containers {
-      display: flex;
-      /* justify-content: space-around; */
-      align-items: center;
-      margin: 12px 0px 12px 0px;
-
-      }
-
-    h1 {
-      font-size: 60px;
-      margin-bottom: 20px;
-    }
-    .background {
-      width: auto;
-    }
-    .image{
-      border-radius: 15px;
-      height:350px;
-      width:350px;
-      padding:2px;
-    }
-    header{
-      margin-bottom: 78px;
-    }
-  }
-
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .chart-containers {
     display: flex;
     justify-content: space-around;
@@ -203,3 +170,7 @@ span{
   }
 }
 
+/* @media only screen and (max-width: 600px) {
+
+}
+ */
