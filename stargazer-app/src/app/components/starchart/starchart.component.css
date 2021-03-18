@@ -23,6 +23,9 @@ header {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0;
+  width:100%;
+  display:flex;
+  align-content:center;
 }
 h1 {
   text-align: center;
@@ -33,7 +36,12 @@ h1 {
   -webkit-text-fill-color: transparent;
   margin: 55px 0px 30px 0px;
 }
-
+.design{
+  background-size: contain;
+  background-image: url(https://th.bing.com/th/id/R4554cad1ea150c11ff3216c5f06911bd?rik=Kkom%2ftEuHNGMLg&riu=http%3a%2f%2fwww.interactivestars.com%2fthe_box_of_stars%2fconstellation_img_home%2ftaurus.png&ehk=%2bnxPMs%2bq2B6xLqi9IwDuGoOAFLEYocFAUJnx475dyIg%3d&risl=&pid=ImgRaw);
+  padding: 10px;
+  width:100%;
+}
 h3 {
   font-family: "Raleway", sans-serif;
   color: orange;
@@ -132,7 +140,6 @@ button:hover {
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function:linear;
-
 }
 @keyframes spinning{
   from{transform: rotate(0deg)}
@@ -140,7 +147,7 @@ button:hover {
 }
 span{
   position:absolute;
-  animation: sp 12s ease-out infinite normal;
+  animation: sp 14s ease-out infinite normal;
 }
 @keyframes sp{
   0%{
@@ -156,8 +163,6 @@ span{
   transform:scale(0);
 }
 }
-
-
 @media only screen and (max-width: 600px) {
   .starchart-container {
     padding: 15px;
@@ -184,6 +189,9 @@ span{
   .loading {
     height: 200px;
     width: 200px;
+  }
+  .design{
+    background-image:none;
   }
 }
 
