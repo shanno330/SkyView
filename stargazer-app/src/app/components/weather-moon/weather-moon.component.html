@@ -22,7 +22,7 @@
 </div>
   <div class="displayMoonWeather">
     <div class="day1">
-      <div class="weatherImage1"></div>
+      <img class="weatherImage1" *ngIf ="condition1" [src] = "condition1"/>
       <div class = "cellWeatherMoon">
       <div class="text1">
         <p class = "text">City :  {{weather.name}}</p>
@@ -36,7 +36,7 @@
     </div>
     </div>
     <div class="day2">
-      <div class="weatherImage2"></div>
+      <img class="weatherImage2"  *ngIf ="condition2" [src] = "condition2"/>
       <div class = "cellWeatherMoon">
       <div class="text2">
         <p class = "text">City :  {{weather.name}}</p>
@@ -50,7 +50,7 @@
     </div>
     </div>
     <div class="day3">
-      <div class="weatherImage3"></div>
+      <img class="weatherImage3" *ngIf ="condition3" [src] ="condition3"/>
       <div class = "cellWeatherMoon">
       <div class="text3">
         <p class = "text">City :  {{weather.name}}</p>
