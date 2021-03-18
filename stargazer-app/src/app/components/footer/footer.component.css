@@ -1,26 +1,30 @@
-.container{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background:rgb(22, 20, 46);
-    font-family: "Raleway", sans-serif;
-    height: 50px;
-    color: white;
-
+.footer-container {
+  bottom: 0;
 }
- p, a, div {
-    padding-left:5px;
-    color: white;
- }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(22, 20, 46);
+  font-family: "Raleway", sans-serif;
+  height: 50px;
+  color: white;
+}
+
+p,
+a,
+div {
+  color: white;
+}
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
-
 @media only screen and (min-width: 600px) {
-    .container {
-        flex-wrap: wrap;
-    }
+  .container {
+    flex-wrap: wrap;
+  }
 }
