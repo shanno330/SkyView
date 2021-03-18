@@ -5,6 +5,9 @@
 
   <div class="background">
     <h1>Explore Star Charts</h1>
+    <h3>Enter your location to view constellations in your area</h3>
+    <h3>OR</h3>
+    <h3>Scroll down to view the sky above you in your area</h3>
     <div class="chart-containers">
       <div class="chart">
         <form>
@@ -33,16 +36,27 @@
               {{ one.name }}
             </option>
           </select>
-          <button class="button" (click)="searchCons()" (click)="imageLoadingConst()">
+          <button
+            class="button"
+            (click)="searchCons()"
+            (click)="imageLoadingConst()"
+          >
             View Constellation
           </button>
         </form>
+        <div class="image-container">
+          <div class="loading" *ngIf="loadingConst">
+            <span>Loading...</span>
+          </div>
+          <img
+            (load)="imageLoadingConst()"
+            class="image"
+            *ngIf="starConst"
+            [src]="starConst"
+          />
+        </div>
+      </div>
 
-      </div>
-      <div class="image-container">
-        <div class="loading" *ngIf="loadingConst"><span>Loading...</span></div>
-        <img (load)="imageLoadingConst()" class="image" *ngIf="starConst" [src]="starConst" />
-      </div>
       <div class="area">
         <form>
           <label for="title">Earthly Location:</label>
@@ -53,14 +67,19 @@
             name="title"
             [(ngModel)]="filterCity"
           />
-          <button (click)="searchArea()" (click)="imageLoadingArea()">View Your Sky</button>
-
-
+          <button (click)="searchArea()" (click)="imageLoadingArea()">
+            View Your Sky
+          </button>
         </form>
-      </div>
-      <div class="image-container">
-        <div class="loading" *ngIf="loadingArea"><span>Loading...</span></div>
-        <img (load)="imageLoadingArea()" class="image" *ngIf="starArea" [src]="starArea" />
+        <div class="image-container">
+          <div class="loading" *ngIf="loadingArea"><span>Loading...</span></div>
+          <img
+            (load)="imageLoadingArea()"
+            class="image"
+            *ngIf="starArea"
+            [src]="starArea"
+          />
+        </div>
       </div>
     </div>
   </div>

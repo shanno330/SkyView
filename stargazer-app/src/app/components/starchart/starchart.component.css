@@ -1,9 +1,6 @@
-html {
-  padding: 0;
-  margin: 0;
-}
-
 .starchart-container {
+  display: flex;
+  flex-direction: column;
   background: rgb(22, 20, 46);
   background: linear-gradient(
     rgba(22, 20, 46, 1),
@@ -18,6 +15,7 @@ html {
 .background {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -28,13 +26,20 @@ header {
 }
 h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
   font-family: "Orbitron", sans-serif;
   background: -webkit-linear-gradient(right, #eee, orange, #eee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 80px;
+  margin: 55px 0px 30px 0px;
 }
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: orange;
+  text-align: center;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -43,14 +48,15 @@ header {
 .chart-containers {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  margin-top: 30px;
   padding: 15px;
+  align-items: center;
 }
 
 .chart,
 .area {
   margin: 10px;
-  border: 1px solid black;
+  border: 1px solid grey;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,20 +95,30 @@ button:hover {
   cursor: pointer;
 }
 
+.image-container {
+  height: 700px;
+  width: 700px;
+  background: url("src/assets/starchart-default.jpg") no-repeat center center fixed;
+  background-size: cover;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .image {
   background-color: grey;
   border-radius:15px;
-  height: 300px;
-  width: 300px;
+  height: 700px;
+  width: 700px;
   padding: 2px;
-  display: flexbox;
   align-items: center;
 }
 
 .loading {
   position:relative;
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,36 +157,33 @@ span{
 }
 }
 
-@media only screen and (max-width: 768px) {
-  .chart-containers {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-  }
-  .background {
-    display: inline;
-    justify-content: space-around;
-    align-items: center;
+
+@media only screen and (max-width: 600px) {
+  .starchart-container {
+    padding: 15px;
   }
 
   h1 {
-    font-size: 70px;
-    margin-top: 0;
+    margin: 70px 0px 30px 0px;
+    font-size: 50px;
   }
-  .image{
-    height:600px;
-    width:700px;
-    border-radius: 15px;
-    margin:20px;
-    padding:10px;
+
+  h2, h3 {
+    margin: 10px;
   }
-  .chart,.area{
-    width:300px;
+
+  .chart-containers {
+    margin-top: 15px;
+  }
+
+  .image-container, .image {
+    height: 300px;
+    width: 300px;
+  }
+
+  .loading {
+    height: 200px;
+    width: 200px;
   }
 }
 
-/* @media only screen and (max-width: 600px) {
-
-}
- */
