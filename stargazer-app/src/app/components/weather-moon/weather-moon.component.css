@@ -15,7 +15,7 @@ background: linear-gradient( rgba(22,20,46,1), rgba(12,67,96,1) 39%, rgba(33,96,
 /* background-size: cover;
 background: url('https://i.etsystatic.com/11598164/r/il/0daf56/933217164/il_794xN.933217164_htw0.jpg'); */
 }
-.search{
+ .search{
   display:flex;
   justify-content:center;
 }
@@ -38,7 +38,7 @@ input{
 }
 button:hover{
     background: rgba(255, 255, 255, .2);
-}
+} 
 
 img{
   border-radius:15px;
