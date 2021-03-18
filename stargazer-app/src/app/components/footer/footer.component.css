@@ -1,9 +1,9 @@
 .footer-container {
   bottom: 0;
 }
-
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background: rgb(22, 20, 46);
@@ -12,10 +12,12 @@
   color: white;
 }
 
-p,
 a,
 div {
   color: white;
+  padding-left: 5px;
+  color: white;
+  font-size: 10px;
 }
 
 a {

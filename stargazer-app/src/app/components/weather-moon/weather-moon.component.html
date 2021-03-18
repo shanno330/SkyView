@@ -17,18 +17,8 @@
     </div>
   </div>
   <div class = "search">
-    <form #Form="ngForm" (ngSubmit)="searchDate(Form)">
-      <label for="city"></label>
-      <input
-      type="text"
-      id="city/zipcode"
-      name="city"
-      placeholder="Enter zip code"
-      required
-      ngModel
-    />
-    <button>SearchWeather</button>
-  </form>
+    <app-search></app-search>
+  
 </div>
   <div class="displayMoonWeather">
     <div class="day1">
