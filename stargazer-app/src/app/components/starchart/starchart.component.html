@@ -37,10 +37,10 @@
             View Constellation
           </button>
         </form>
-        
+
       </div>
       <div class="image-container">
-        <div class="loading" *ngIf="loadingConst">Loading...</div>
+        <div class="loading" *ngIf="loadingConst"><span>Loading...</span></div>
         <img (load)="imageLoadingConst()" class="image" *ngIf="starConst" [src]="starConst" />
       </div>
       <div class="area">
@@ -54,15 +54,14 @@
             [(ngModel)]="filterCity"
           />
           <button (click)="searchArea()" (click)="imageLoadingArea()">View Your Sky</button>
-          
-         
+
+
         </form>
       </div>
       <div class="image-container">
-        <div class="loading" *ngIf="loadingArea">Loading...</div>
+        <div class="loading" *ngIf="loadingArea"><span>Loading...</span></div>
         <img (load)="imageLoadingArea()" class="image" *ngIf="starArea" [src]="starArea" />
       </div>
     </div>
   </div>
-  
 </div>
