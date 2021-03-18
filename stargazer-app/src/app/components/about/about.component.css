@@ -23,6 +23,12 @@ body {
     rgba(192, 110, 13, 1) */
   );
 }
+.info {
+  background-color:  rgb(22, 20, 46);
+  padding: 0;
+  font-size: 50px;
+
+  }
 
 h1 {
     font-size: 50px;
@@ -37,7 +43,7 @@ h1 {
 .flex-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-content: center;
   width: 100%;
 }
@@ -48,17 +54,11 @@ h1 {
   margin: 15px;
   padding: 10px;
 }
-p {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    /* margin: 65px; */
-    color: white;
-    font-family: "Raleway", sans-serif;
-    /* width: 100%;
-    height: auto; */
-}
+
+.info {
+    font-size: 50px;
+    margin-left: 20%;
+} 
 
 img {
   width: 100%;
@@ -95,10 +95,10 @@ h2 {
     justify-content: space-around;
     height: 100vh;
   }
-  p {
+  /* .info {
     flex-direction: column;
-    justify-content: space-around;
-  }
+    justify-content: space-between;
+  } */
 
 }
 
