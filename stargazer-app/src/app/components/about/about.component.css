@@ -23,8 +23,13 @@ body {
     rgba(192, 110, 13, 1) */
   );
 }
+
+.fab, .fa-github{
+  color:rgb(111, 139, 167);
+  padding: 5px;
+}
 .info {
-  background-color:  rgb(22, 20, 46);
+  /* background-color:  rgb(22, 20, 46); */
   padding: 0;
   font-size: 50px;
 
@@ -64,8 +69,7 @@ h1 {
 } 
 
 img {
-  /* width: 100%;
-  height: auto; */
+  
   /* This styling above works for desktop img size, not mobile--fix mobile */
   border-radius: 10px;
   border: 3px solid orange;
@@ -77,35 +81,36 @@ h2 {
     text-shadow: 0.1em 0.1em 0.2em white;
     color:orange;
     height: 45px;
-    /* text-shadow: -1px 0 black, 0 1px black,
-      1px 0 black, 0 -1px black */
+    
 }
 /* tablet view <768 */
 @media only screen and (min-width: 600px) {
   h1{
     font-size: 85px;
-    margin: 20px;
+    margin: 10px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
 }
 }
 /* desktop >768 */
 @media only screen and (min-width: 768px) {
   .header {
-    padding: 30px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 7px;
 }
   .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 100vh;
+    height: auto;
   }
 
 
   
-  /* .info {
-    flex-direction: column;
-    justify-content: space-between;
-  } */
+  
 
 }
 
