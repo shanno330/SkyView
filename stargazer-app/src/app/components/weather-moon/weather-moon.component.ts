@@ -42,6 +42,7 @@ export class WeatherMoonComponent implements OnInit {
         .getWeatherApi(queryParams.city)
         .subscribe((data: any) => {
           this.setWeather(data);
+          //Day1
           if (this.weather.text1 === 'Overcast') {
             this.condition1 = this.img4;
           } else if (this.weather.text1 === 'Clear') {
@@ -54,6 +55,7 @@ export class WeatherMoonComponent implements OnInit {
             this.condition1 = this.img2;
           }
 
+          //Day2
           if (this.weather.text2 === 'Overcast') {
             this.condition2 = this.img4;
           } else if (this.weather.text2 === 'Clear') {
@@ -65,7 +67,7 @@ export class WeatherMoonComponent implements OnInit {
           } else {
             this.condition2 = this.img2;
           }
-
+          //Day3
           if (this.weather.text3 === 'Overcast') {
             this.condition3 = this.img4;
           } else if (this.weather.text3 === 'Clear') {
@@ -77,7 +79,7 @@ export class WeatherMoonComponent implements OnInit {
           } else {
             this.condition3 = this.img2;
           }
-
+          //moon image from astronomy api
           this.authService
             .moonImage(this.weather.lat, this.weather.lon, this.weather.date1)
             .subscribe((data: any) => {
