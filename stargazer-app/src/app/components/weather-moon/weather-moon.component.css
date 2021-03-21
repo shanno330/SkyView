@@ -161,7 +161,7 @@ h1 {
   .weatherImage1,
   .weatherImage2,
   .weatherImage3 {
-    width: 370px;
+    width: 500px;
   }
   .search {
     margin-top: 250px;
@@ -182,70 +182,34 @@ h1 {
     flex-direction: column;
   }
   .cellWeatherMoon {
-    width: 370px;
+    width: 500px;
     height: 310px;
   }
   .moonImage1,
   .moonImage2,
   .moonImage3 {
-    height: 270px;
-    width: 280px;
+    height: 280px;
+    width: 220px;
     padding: 2px;
-    margin: 10px;
+    margin: 10px 0px 10px 10px;
   }
   .text1,
   .text2,
   .text3 {
-    margin-top: 20px;
+    margin-top: 15px;
     width: 250px;
     height: 260px;
     line-height: 30px;
-    font-size: 15px;
+    font-size: 20px;
+    line-height: 45px;
+  }
+  p.text{
+    width:260px;
   }
 }
 /* mobile view */
 
 @media only screen and (max-width: 600px) {
-  .text1,
-  .text2,
-  .text3 {
-    margin-top: 20px;
-    width: 250px;
-    height: 260px;
-    line-height: 25px;
-    font-size: 15px;
-    padding-left: 3px;
-  }
-
-  .banner.clouds {
-    top: 100px;
-    height: 200px;
-  }
-  .banner .clouds img {
-    bottom: 0px;
-    top: 50px;
-  }
-  h1 {
-    font-size: 30px;
-    margin-top: 120px;
-  }
-}
-
-/* @media only screen and (max-width: 1010px) {
-  .text1,
-  .text2,
-  .text3 {
-    font-size: 16px;
-    line-height: 45px;
-    width: 250px;
-  }
-  .moonImage1,
-  .moonImage2,
-  .moonImage3 {
-    margin: 20px;
-  }
-} */
-/* @media only screen and (max-width: 375px) {
   .nav-container {
     width: 100%;
   }
@@ -278,5 +242,18 @@ h1 {
   }
   p.text {
     width: 275px;
-  } */
-/* } */
+  }
+  h1{
+    margin-top:80px;
+  }
+  .text1,
+  .text2,
+  .text3 {
+    font-size: 18px;
+    line-height: 50px;
+  }
+  .banner .clouds img{
+    top: 42px;
+    height:90%;
+  }
+}
