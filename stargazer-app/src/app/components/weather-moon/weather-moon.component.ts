@@ -27,6 +27,8 @@ export class WeatherMoonComponent implements OnInit {
   img5: string =
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3rKWQAFA0OnhQ0uYzoziQOtg1AqlfMEXo8w&usqp=CAU';
   img6: string = 'https://cdn.wallpapersafari.com/29/51/tQX2Au.jpg'; //partly cloudy
+  img7: string =
+    'https://www.halesowennews.co.uk/resources/images/6235078.jpg?display=1&htype=0&type=responsive-gallery';
   image1: any;
   image2: any;
   image3: any;
@@ -49,8 +51,16 @@ export class WeatherMoonComponent implements OnInit {
             this.condition1 = this.img3;
           } else if (this.weather.text1 === 'Partly cloudy') {
             this.condition1 = this.img6;
-          } else if (this.weather.text1 === 'Rainy') {
+          } else if (
+            this.weather.text1 === 'Moderate or heavy rain shower' ||
+            this.weather.text3 === 'Heavy rain' ||
+            this.weather.text1 === 'Moderate rain'
+          ) {
             this.condition1 = this.img1;
+          } else if (this.weather.text1 === 'Cloudy') {
+            this.condition1 = this.img5;
+          } else if (this.weather.text1 === 'Patchy rain possible') {
+            this.condition1 = this.img7;
           } else {
             this.condition1 = this.img2;
           }
@@ -62,8 +72,16 @@ export class WeatherMoonComponent implements OnInit {
             this.condition2 = this.img3;
           } else if (this.weather.text2 === 'Partly cloudy') {
             this.condition2 = this.img6;
-          } else if (this.weather.text2 === 'Rainy') {
+          } else if (
+            this.weather.text2 === 'Moderate or heavy rain shower' ||
+            this.weather.text2 === 'Heavy rain' ||
+            this.weather.text2 === 'Moderate rain'
+          ) {
             this.condition2 = this.img1;
+          } else if (this.weather.text2 === 'Cloudy') {
+            this.condition2 = this.img5;
+          } else if (this.weather.text2 === 'Patchy rain possible') {
+            this.condition2 = this.img7;
           } else {
             this.condition2 = this.img2;
           }
@@ -74,8 +92,16 @@ export class WeatherMoonComponent implements OnInit {
             this.condition3 = this.img3;
           } else if (this.weather.text3 === 'Partly cloudy') {
             this.condition3 = this.img6;
-          } else if (this.weather.text3 === 'Rainy') {
+          } else if (
+            this.weather.text3 === 'Moderate or heavy rain shower' ||
+            this.weather.text3 === 'Heavy rain' ||
+            this.weather.text3 === 'Moderate rain'
+          ) {
             this.condition3 = this.img1;
+          } else if (this.weather.text3 === 'Cloudy') {
+            this.condition3 = this.img5;
+          } else if (this.weather.text3 === 'Patchy rain possible') {
+            this.condition3 = this.img7;
           } else {
             this.condition3 = this.img2;
           }

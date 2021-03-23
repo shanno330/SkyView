@@ -87,6 +87,7 @@ header {
 }
 
 h1 {
+  margin-top: 0;
   text-align: center;
   font-size: 70px;
   font-family: "Orbitron", sans-serif;
@@ -115,10 +116,6 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-}
-.weatherImage1,
-.weatherImage2,
-.weatherImage3 {
   border: 5px solid #bb864c;
 }
 
@@ -164,6 +161,7 @@ h1 {
   .weatherImage3 {
     width: 500px;
   }
+
   .search {
     margin-top: 250px;
     display: flex;
@@ -200,20 +198,16 @@ h1 {
     margin-top: 15px;
     width: 250px;
     height: 260px;
-    line-height: 30px;
     font-size: 20px;
     line-height: 45px;
   }
-  p.text{
-    width:260px;
+  p.text {
+    width: 260px;
   }
 }
 /* mobile view */
 
 @media only screen and (max-width: 600px) {
-  .nav-container {
-    width: 100%;
-  }
   .weatherImage1,
   .weatherImage2,
   .weatherImage3 {
@@ -222,11 +216,10 @@ h1 {
     padding: 0;
     margin: 10px;
   }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .bannerContent {
+    display: flexbox;
   }
+
   .cellWeatherMoon {
     width: 360px;
     height: 590px;
@@ -244,17 +237,17 @@ h1 {
   p.text {
     width: 275px;
   }
-  h1{
-    margin-top:80px;
+  h1 {
+    margin-top: 80px;
+    margin-bottom: 0;
   }
   .text1,
   .text2,
   .text3 {
     font-size: 18px;
-    line-height: 50px;
   }
-  .banner .clouds img{
+  .banner .clouds img {
     top: 42px;
-    height:90%;
+    height: 80%;
   }
 }
