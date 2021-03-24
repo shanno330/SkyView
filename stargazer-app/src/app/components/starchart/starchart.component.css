@@ -1,3 +1,4 @@
+
 *{
   padding: 0;
   margin:0;
@@ -8,12 +9,38 @@ html{
     height:100vh;
     background: rgb(22,20,46);
     background: linear-gradient( rgba(22,20,46,1), rgba(12,67,96,1) 39%, rgba(33,96,104,1), rgba(61,109,64,1) , rgba(110,104,8,1), rgba(131,106,29,1), rgba(192,110,13,1) );
+
+.starchart-container {
+  display: flex;
+  flex-direction: column;
+  background: rgb(22, 20, 46);
+  background: linear-gradient(
+    rgba(22, 20, 46, 1),
+    rgba(12, 67, 96, 1) 39%,
+    rgba(33, 96, 104, 1),
+    rgba(61, 109, 64, 1),
+    rgba(110, 104, 8, 1),
+    rgba(131, 106, 29, 1),
+    rgba(192, 110, 13, 1)
+  );
+}
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 header {
-    display: flex;
-    justify-content: center;
+  background: rgba(22, 20, 46, 1);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+  width:100%;
+  display:flex;
+  align-content:center;
 }
+
 .button-container{
   margin:0;
 }
@@ -23,14 +50,79 @@ h1 {
     background: -webkit-linear-gradient(right, orange,white,orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Orbitron", sans-serif;
+  background: -webkit-linear-gradient(right, #eee, orange, #eee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 55px 0px 30px 0px;
+}
+.design{
+  background-size: contain;
+  background-image: url(https://th.bing.com/th/id/R4554cad1ea150c11ff3216c5f06911bd?rik=Kkom%2ftEuHNGMLg&riu=http%3a%2f%2fwww.interactivestars.com%2fthe_box_of_stars%2fconstellation_img_home%2ftaurus.png&ehk=%2bnxPMs%2bq2B6xLqi9IwDuGoOAFLEYocFAUJnx475dyIg%3d&risl=&pid=ImgRaw);
+  padding: 10px;
+  width:100%;
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: orange;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+
 }
 
 .chart-containers {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 15px;
+  align-items: center;
 }
 
+.chart,
+.area {
+  margin: 10px;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 0px 0px 25px 5px rgba(22,20,46,0.75);
+  border-radius: 10px;
+  background-color: rgb(194, 190, 190);
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+input {
+  display: inline-block;
+  align-items: center;
+  padding: 7px;
+  margin: 7px;
+}
+
+button {
+  display: block;
+  padding: 7px;
+  margin: 7px;
+  border-radius: 5px;
+  outline: auto;
+  border: none;
+  background-color: orange;
+  font-family: "Raleway", sans-serif;
+}
 form{
     width:40%;
     border:1px solid black;
@@ -45,17 +137,102 @@ form{
     margin:20px;
     color: orange;
     line-height: 30px;
+
+button:hover {
+  cursor: pointer;
+
 }
 
 .image-container {
-    width: 400px;
-    height: 400px;
+  height: 700px;
+  width: 700px;
+  background: url("src/assets/starchart-default.jpg") no-repeat center center fixed;
+  background-size: cover;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
-    width: 400px;
-    height: 400px;
-    background-color: grey;
+  background-color: grey;
+  border-radius:15px;
+  height: 700px;
+  width: 700px;
+  padding: 2px;
+  align-items: center;
+}
+
+.loading {
+  position:relative;
+  height: 600px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  background-image: url(https://www.transparentpng.com/thumb/black-hole/black-hole-png-7.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  animation-name:spinning;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+}
+@keyframes spinning{
+  from{transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+span{
+  position:absolute;
+  animation: sp 14s ease-out infinite normal;
+}
+@keyframes sp{
+  0%{
+    transform:scale(2);
+  }
+  25%{
+    transform:scale(1);
+  }
+  60%{
+    transform:scale(0.5);
+  }
+100%{
+  transform:scale(0);
+}
+}
+@media only screen and (max-width: 600px) {
+  .starchart-container {
+    padding: 15px;
+  }
+
+  h1 {
+    margin: 70px 0px 30px 0px;
+    font-size: 50px;
+  }
+
+  h2, h3 {
+    margin: 10px;
+  }
+
+  .chart-containers {
+    margin-top: 15px;
+  }
+
+  .image-container, .image {
+    height: 300px;
+    width: 300px;
+  }
+
+  .loading {
+    height: 200px;
+    width: 200px;
+  }
+  .design{
+    background-image:none;
+  }
 }
 button,input,select{
   border-radius:5px;

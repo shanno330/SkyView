@@ -25,7 +25,9 @@ export class AuthService {
     icon1:'',
     icon2:'',
     icon3:'',
-    temp_f: 0,
+    temp_f1: 0,
+    temp_f2: 0,
+    temp_f3: 0,
     dailyChanceOfRain1: '',
     dailyChanceOfSnow1: '',
     dailyChanceOfRain2: '',
@@ -116,7 +118,7 @@ starChart(lat:number, lon:number,date:string,cons:string){
 
 starChartArea(lat:number,lon:number,date:string, right:number,dec:number){
   return this.http.post(`https://api.astronomyapi.com/api/v2/studio/star-chart`, {
-    style:"default",
+    style:"navy",
     observer: {
       latitude:lat,
       longitude: lon,
@@ -131,7 +133,7 @@ starChartArea(lat:number,lon:number,date:string, right:number,dec:number){
                   declination:dec
               }
           },
-          zoom: 9
+          zoom: 3
       },
   },
 },

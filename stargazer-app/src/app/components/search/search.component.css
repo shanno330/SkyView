@@ -1,0 +1,32 @@
+button,
+input {
+  background: transparent;
+  border: 1px solid orange;
+  color: orange;
+  padding: 3px 5px;
+  margin: 5px;
+  font-size: 22px;
+  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+}
+h4{
+  margin-left: 10px;
+}
+input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+}

@@ -15,13 +15,25 @@ body {
   background: linear-gradient(
     rgba(22, 20, 46, 1),
     rgba(12, 67, 96, 1) 39%,
+    rgb(58, 74, 99),
     rgba(33, 96, 104, 1),
     rgba(61, 109, 64, 1),
-    rgba(110, 104, 8, 1),
+    /* rgba(110, 104, 8, 1),
     rgba(131, 106, 29, 1),
-    rgba(192, 110, 13, 1)
+    rgba(192, 110, 13, 1) */
   );
 }
+
+.fab, .fa-github{
+  color:rgb(111, 139, 167);
+  padding: 5px;
+}
+.info {
+  /* background-color:  rgb(22, 20, 46); */
+  padding: 0;
+  font-size: 50px;
+
+  }
 
 h1 {
     font-size: 50px;
@@ -36,49 +48,73 @@ h1 {
 .flex-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-content: center;
+  width: 100%;
 }
-p{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    margin: 65px;
-    color: white;
-    font-family: "Raleway", sans-serif;
-    width: 100%;
-    height: auto;
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  font-size: 50px;
+    
+} 
+
+img {
+  
+  /* This styling above works for desktop img size, not mobile--fix mobile */
+  border-radius: 10px;
+  border: 3px solid orange;
+
 }
 h2 {
-    align-content: center;
+    text-align: center;
     justify-content: center;
     text-shadow: 0.1em 0.1em 0.2em white;
-    /* text-shadow: -1px 0 black, 0 1px black,
-      1px 0 black, 0 -1px black */
+    color:orange;
+    height: 45px;
+    
 }
 /* tablet view <768 */
 @media only screen and (min-width: 600px) {
+  h1{
+    font-size: 85px;
+    margin: 10px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
 
 }
 /* desktop >768 */
 @media only screen and (min-width: 768px) {
   .header {
-    padding: 30px;
-    margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 7px;
 }
   .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: auto;
+    margin-top: none;
+    padding: none;
   }
-  p {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  h1{
-      font-size: 85px;
-      margin: 20px;
-  }
+
+
+  
+  
+
 }
 

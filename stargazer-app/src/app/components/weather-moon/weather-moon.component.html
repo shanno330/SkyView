@@ -1,9 +1,7 @@
 <html>
-
   <header>
-  <app-header></app-header>
+    <app-header></app-header>
   </header>
-  <!-- <app-search></app-search> -->
 
   <div class="banner">
     <div class="moon"></div>
@@ -12,69 +10,67 @@
         src="https://www.transparentpng.com/thumb/clouds/AjeEHR-clouds-best-png.png"
       />
       <div class="bannerContent">
-        <h1>Weather Forecast</h1>
+        <h1>Nighttime Weather Forecast</h1>
       </div>
     </div>
   </div>
-  <div class = "search">
-    <form #Form="ngForm" (ngSubmit)="searchDate(Form)">
-      <label for="city"></label>
-      <input
-      type="text"
-      id="city/zipcode"
-      name="city"
-      placeholder="Enter zip code"
-      required
-      ngModel
-    />
-    <button>SearchWeather</button>
-  </form>
-</div>
+  <div class="search">
+    <app-search></app-search>
+  </div>
   <div class="displayMoonWeather">
     <div class="day1">
-      <div class="weatherImage1"></div>
-      <div class = "cellWeatherMoon">
-      <div class="text1">
-        <p class = "text">City :  {{weather.name}}</p>
-        <p class = "text">Date :  {{weather.date1}}</p>
-        <p class = "text">Condition :  {{weather.text1}}</p>
-        <p class = "text">Temperature :  {{weather.temp_f}}</p>
-        <p class = "text">Chance of Rain :  {{weather.dailyChanceOfRain1}}</p>
-        <p class = "text">Chance of Snow :  {{weather.dailyChanceOfSnow1}}</p>
+      <img class="weatherImage1" *ngIf="condition1" [src]="condition1" />
+      <div class="cellWeatherMoon">
+        <div class="text1">
+          <p class="text">City : {{ weather.name }}</p>
+          <p class="text">Date : {{ weather.date1 }}</p>
+          <p class="text">Condition : {{ weather.text1 }}</p>
+          <p class="text">Temperature : {{ weather.temp_f1 }}<span>°F</span></p>
+          <p class="text">
+            Chance of Rain : {{ weather.dailyChanceOfRain1 }}<span>%</span>
+          </p>
+          <p class="text">
+            Chance of Snow : {{ weather.dailyChanceOfSnow1 }}<span>%</span>
+          </p>
+        </div>
+        <div class="moonImage1"><img [src]="image1" /></div>
       </div>
-      <div class="moonImage1"><img [src]="image1"></div>
-    </div>
     </div>
     <div class="day2">
-      <div class="weatherImage2"></div>
-      <div class = "cellWeatherMoon">
-      <div class="text2">
-        <p class = "text">City :  {{weather.name}}</p>
-        <p class = "text">Date :  {{weather.date2}}</p>
-        <p class = "text">Condition :  {{weather.text2}}</p>
-        <p class = "text">Temperature :  {{weather.temp_f}}</p>
-        <p class = "text">Chance of Rain :  {{weather.dailyChanceOfRain2}}</p>
-        <p class = "text">Chance of Snow :  {{weather.dailyChanceOfSnow2}}</p>
+      <img class="weatherImage2" *ngIf="condition2" [src]="condition2" />
+      <div class="cellWeatherMoon">
+        <div class="text2">
+          <p class="text">City : {{ weather.name }}</p>
+          <p class="text">Date : {{ weather.date2 }}</p>
+          <p class="text">Condition : {{ weather.text2 }}</p>
+          <p class="text">Temperature : {{ weather.temp_f2 }}<span>°F</span></p>
+          <p class="text">
+            Chance of Rain : {{ weather.dailyChanceOfRain2 }}<span>%</span>
+          </p>
+          <p class="text">
+            Chance of Snow : {{ weather.dailyChanceOfSnow2 }}<span>%</span>
+          </p>
+        </div>
+        <div class="moonImage2"><img [src]="image2" /></div>
       </div>
-      <div class="moonImage2"><img [src]="image2"></div>
-    </div>
     </div>
     <div class="day3">
-      <div class="weatherImage3"></div>
-      <div class = "cellWeatherMoon">
-      <div class="text3">
-        <p class = "text">City :  {{weather.name}}</p>
-        <p class = "text">Date :  {{weather.date3}}</p>
-        <p class = "text">Condition :  {{weather.text3}}</p>
-        <p class = "text">Temperature :  {{weather.temp_f}}</p>
-        <p class = "text">Chance of Rain :  {{weather.dailyChanceOfRain3}}</p>
-        <p class = "text">Chance of Snow :  {{weather.dailyChanceOfSnow3}}</p>
+      <img class="weatherImage3" *ngIf="condition3" [src]="condition3" />
+      <div class="cellWeatherMoon">
+        <div class="text3">
+          <p class="text">City : {{ weather.name }}</p>
+          <p class="text">Date : {{ weather.date3 }}</p>
+          <p class="text">Condition : {{ weather.text3 }}</p>
+          <p class="text">Temperature : {{ weather.temp_f3 }}<span>°F</span></p>
+          <p class="text">
+            Chance of Rain : {{ weather.dailyChanceOfRain3 }}<span>%</span>
+          </p>
+          <p class="text">
+            Chance of Snow : {{ weather.dailyChanceOfSnow3 }}<span>%</span>
+          </p>
+        </div>
+        <div class="moonImage3"><img [src]="image3" /></div>
       </div>
-      <div class="moonImage3"><img [src]="image3"></div>
     </div>
-    </div>
-    <!-- <div class="day4">
-      <div class="weatherImage4"></div>
-    </div> -->
   </div>
 </html>
