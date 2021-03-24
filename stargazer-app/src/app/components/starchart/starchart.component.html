@@ -1,3 +1,22 @@
+
+<html>
+<header>
+  <app-header></app-header>
+</header>
+<h1>Explore Star Charts</h1>
+<div class="chart-containers">
+  <form>
+    <label for="city">Earthly Location:</label>
+    <input
+      type="text"
+      id="city"
+      name="city"
+      placeholder="Enter Zipcode"
+      class="text"
+      required
+      [(ngModel)]="filterCity"
+    />
+
 <div class="starchart-container">
   <header>
     <app-header></app-header>
@@ -86,3 +105,7 @@
     </div>
   </div>
 </div>
+
+</html>
+
+
