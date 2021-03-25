@@ -247,7 +247,9 @@ h1 {
     font-size: 18px;
   }
   .banner .clouds img {
-    top: 42px;
-    height: 80%;
+    display: none;
+  }
+  .clouds{
+    display: none;
   }
 }
